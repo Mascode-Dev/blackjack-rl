@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="results/comparaison_3d_blackjack.png" width="600" title="Comparison of the State Value | Hard vs Soft Hands">
+  <img src="results/comparaison_3d_blackjack.png" width="1000" title="Comparison of the State Value | Hard vs Soft Hands">
 </p>
 
 # Blackjack Reinforcement Learning (Q-Learning)
@@ -42,8 +42,18 @@ The agent uses a **Decaying Epsilon-Greedy** policy:
 
 The agent shows a clear upward trend in average rewards, plateauing as it masters the game logic. The final reward stability near the theoretical house edge proves the agent has reached a near-optimal policy.
 
+The agent utilizes the Q-Learning algorithm, a model-free reinforcement learning strategy.
+I implemented the Bellman Equation to iteratively update the action-value function:
+$Q(s,a) \leftarrow Q(s,a) + \alpha[R(s,a) + \gamma.max_{a^{\prime}} Q(s^{\prime},a^{\prime})-Q(s,a)]$
+
+**Key Hyperparameters**:
+
+- **Learning Rate ($\alpha$)**: Starts at $0.1$ and decays to $0.001$ to ensure late-stage stability.
+- **Discount Factor ($\gamma$)**: Set to $0.95$ to prioritize long-term winning probability.
+- **Epsilon-Greedy ($\epsilon$)**: Decays from $1.0$ (pure exploration) to $0.01$ (pure exploitation).
+
 <p align="center">
-  <img src="results/learning_curve.png" width="600" title="Learning Curve">
+  <img src="results/learning_curve.png" width="800" title="Learning Curve">
 </p>
 
 ### Strategy Heatmaps
@@ -61,3 +71,7 @@ The heatmaps show the agent's decision boundaries.
 ### 3D Value Function
 
 This visualization shows the "Reward Topography." The peaks at score 21 and the valleys at 14–16 (against a Dealer 10/Ace) illustrate that the agent has a high-fidelity understanding of winning and losing probabilities across all game scenarios.
+
+<p align="center">
+  <img src="results/comparaison_3d_blackjack.png" width="1000" title="Comparison of the State Value | Hard vs Soft Hands">
+</p>
