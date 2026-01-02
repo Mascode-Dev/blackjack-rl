@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="results/comparaison_3d_blackjack.png" width="1000" title="Comparison of the State Value | Hard vs Soft Hands">
+  <img src="results/comparison_3d_blackjack.png" width="1000" title="Comparison of the State Value | Hard vs Soft Hands">
 </p>
 
 # Blackjack Reinforcement Learning (Q-Learning)
@@ -73,5 +73,5 @@ The heatmaps show the agent's decision boundaries.
 This visualization shows the "Reward Topography." The peaks at score 21 and the valleys at 14–16 (against a Dealer 10/Ace) illustrate that the agent has a high-fidelity understanding of winning and losing probabilities across all game scenarios.
 
 <p align="center">
-  <img src="results/comparaison_3d_blackjack.png" width="1000" title="Comparison of the State Value | Hard vs Soft Hands">
+  <img src="results/comparison_3d_blackjack.png" width="1000" title="Comparison of the State Value | Hard vs Soft Hands">
 </p>
